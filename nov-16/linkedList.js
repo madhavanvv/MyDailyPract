@@ -16,9 +16,7 @@ class LinkedList {
     newNode.next = this.head;
     this.head = newNode;
   }
-  llDisplay() {
-    console.log(this.head);
-  }
+
   removeAtHead() {
     if (this.head == null) {
       return;
@@ -26,6 +24,18 @@ class LinkedList {
     let tmp = this.head.next;
     this.head.next = null;
     this.head = tmp;
+  }
+  llDisplay() {
+    let tmp = this.head;
+    while (tmp != null) {
+      console.log(tmp.data);
+      tmp = tmp.next;
+    }
+  }
+
+  addAtTail(d) {
+    //let newNode = new Node(d);
+    let tmp = this.head;
   }
 }
 
@@ -36,4 +46,5 @@ ll1.addAtHead(3);
 ll1.addAtHead(2);
 ll1.llDisplay();
 ll1.removeAtHead();
+console.log("-------------------------------");
 ll1.llDisplay();
